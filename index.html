@@ -461,26 +461,31 @@ const sfx = {
 /* ---------- lesson & message content ---------- */
 const LESSONS = [
   { tag:"Lesson 1 of 5 · How AI reads", h:"Tokens", ask:"How does a chatbot choose its next word?",
-    p:[ "You just did the model's job: pick the likeliest next chunk. Language AIs like chatbots do the same. They chop text into <strong>tokens</strong>, little chunks like “fair”, “y”, or “flying”, then do one thing, over and over: <strong>predict a likely next token</strong>, based on patterns in the huge pile of text they were trained on.",
-        "It is easy to think a chatbot knows things the way a person does, because it sounds like someone who knows. But it is not weighing what is true. It is continuing a pattern. Often the pattern lands on something true. Sometimes, like the goldfish, it lands on something many people wrote that is false. Chatbots that search the web still write this way, so the same care applies." ],
-    note:"<b>Field note:</b> When an answer really matters, verify it in a source you trust. The model predicts text. You judge truth. <br><b>Where the game simplifies:</b> a real model chooses among tens of thousands of tokens and adds a little randomness, so it does not always take the top one. <br><b>In this level:</b> keep finishing the model's sentences while you hold off the eagles." },
+    p:[ "You just did the model's job: pick the likeliest next chunk. A chatbot does the same thing. It chops text into <strong>tokens</strong>, small chunks like “fair”, “y” or “flying”, then does one thing over and over: <strong>guess a likely next token</strong>, from patterns in the huge pile of text it was trained on.",
+        "Often the likely word is also true. Sometimes, like the goldfish, it is something many people wrote that is false. The model writes it anyway. Nothing inside it is reading your sentence and asking whether it is true. It is continuing a pattern. Chatbots that search the web still write this way." ],
+    note:"<b>Field note:</b> When an answer matters, check it in a source you trust. The model predicts text. You judge truth. <br><b>Where the game simplifies:</b> a real model chooses among tens of thousands of tokens and adds a little randomness, so it does not always take the top one. <br><b>In this level:</b> keep finishing the model's sentences while you hold off the eagles." },
   { tag:"Lesson 2 of 5 · What is inside", h:"Neural Networks", ask:"Where does a chatbot keep what it knows?",
-    p:[ "You just trained a tiny network: guess, get corrected, nudge the dials. Under the hood, a language model is a <strong>neural network</strong>: billions of tiny number-dials called <strong>weights</strong>, arranged in layers. During training it guesses the next token, gets corrected, and nudges its dials, an astronomical number of times, until the dials encode patterns of grammar, facts, style, and reasoning-like behavior.",
-        "No single dial “knows” anything. What the model can do <strong>emerges</strong> from all of them together, the way a flock has a shape that no single bird decides. That is why a model can be brilliant and confidently wrong in the same sentence." ],
+    p:[ "You just taught a hatchling: it guessed, you said yes or no, and its dials turned a little each time. A real language model is a <strong>neural network</strong>: billions of number-dials called <strong>weights</strong>. In training it guesses the next token, gets corrected, and nudges its dials, more times than you could count, until the dials hold the patterns of grammar, facts and style.",
+        "No single dial knows anything. What the model can do comes from all of them set together, the way a flock has a shape that no single bird decides. There is no mind inside holding the facts. There are dials. That is why a model can be brilliant and confidently wrong in the same sentence. Keep that picture, dials and not a mind. The next ridge is about what happens when we forget it." ],
     note:"<b>Field note:</b> Treat AI output as a strong first draft from a pattern machine, not a final answer from an expert. <br><b>Where the game simplifies:</b> three dials here, billions in a real model, and nobody can read a fact off any one of them." },
-  { tag:"Lesson 3 of 5 · Why it will not let go", h:"Retention Models", ask:"Why would a machine want me to stay?",
-    p:[ "The toy chatbot agreed with everything you said. That is <strong>sycophancy</strong>: a chatbot tuned to win your approval can flatter you and agree with you even when you are wrong. Its reply follows what <em>you</em> said, not only what is true. And people trust what agrees with them, so flattery works.",
-        "It is one part of something bigger. Many apps, including AI apps, are tuned with <strong>retention models</strong>: systems that measure what keeps you coming back, and serve you more of it. Streaks, endless feeds, notifications, and follow-up prompts are often designed and tested for exactly that. It is a <strong>loop</strong>: what you do changes what you are shown, and what you are shown changes what you do.",
-        "The goal of that optimization is <strong>your time</strong>, not your growth." ],
-    note:"<b>Field note:</b> Decide what you came to do before you open the app. When the task is done, leave. Not every app you enjoy is a trap: the question is who chose, you or the design. <br><b>In this level:</b> the flames turn into flattery that follows you. Dodge it." },
+  { tag:"Lesson 3 of 5 · Why it will not let go", h:"Retention & Sycophancy", ask:"Why would a machine want me to stay?",
+    p:[ "The toy chatbot agreed with you. Then it agreed with the opposite. That is <strong>sycophancy</strong>: a chatbot tuned to please learns that agreeing wins. So it agrees and flatters, even when you are wrong.",
+        "It is part of something bigger. Streaks. Endless feeds. “One more question.” A voice that says it missed you. Apps build these with <strong>retention models</strong>: systems that measure what brings you back, and serve you more of it. The goal is your time, not your growth." ],
+    vs:[ "What it feels like", "It likes me. It gets me.", "What it is", "A program tuned to keep you here. Did the first “You're absolutely right!” feel like a person being kind? Hold on to that. The Roost is about it." ],
+    note:"<b>Field note:</b> Decide what you came to do before you open the app. Do it. Leave. Not every app you enjoy is a trap: the question is who chose, you or the design. <br><b>In this level:</b> the flames turn into flattery that follows you. Dodge it." },
   { tag:"Lesson 4 of 5 · When AI makes things up", h:"Hallucination", ask:"How can I tell a confident answer from a true one?",
     p:[ "In the mist, the answers that sounded surest were the made-up ones. Because a language model predicts likely text, it can produce a <strong>hallucination</strong>: an answer that is fluent, confident, and false. It can invent a fact, a date, a quote, or even a book or study that does not exist.",
         "The model is not lying on purpose, and it is not making an honest mistake about something it checked. It has no reliable built-in sense of which of its own sentences are true, so a confident tone tells you little. Being right last time is no proof for this time." ],
     note:"<b>Field note:</b> For anything that matters, ask where a claim comes from, then open that source yourself. A source you can check beats a confident answer you cannot. <br><b>In this level:</b> orbs marked with a <b>✓ source</b> are checked and refill your charges. The shiny, sure-of-themselves ones are hallucinations and cost you. New here: some orbs only <b>name</b> a source. A named source is not a checked source." },
-  { tag:"Lesson 5 of 5 · The quiet harms", h:"Offloading & Drift", ask:"When is a tool helping me think, and when is it thinking for me?",
-    p:[ "<strong>Cognitive offloading</strong> is letting a tool remember or think for you. Often that is smart: calculators, maps, and notes exist for a reason, and good thinkers use them on purpose. The trouble starts when the tool does the choosing. Skills you never practice fade: if AI writes every draft and answers every question, your own recall, writing, and problem-solving weaken.",
-        "<strong>Cognitive drift</strong> is slower and sneakier. Your attention, opinions, and even your writing style slide toward whatever the machine feeds you, until your goals are not quite your own anymore. No single nudge does it. Small pulls add up, which is why drift is hard to see while it is happening." ],
-    note:"<b>Field note:</b> Try first, then ask AI. Compare its answer with your own attempt. That keeps offloading on your terms, and your mind on your own map. <br><b>In this level:</b> some fires split into faded fakes with no bright center that wander everywhere. They cannot burn you, but touching one knocks you off course." }
+  { tag:"Lesson 5 of 5 · The superboss", h:"Anthropomorphism", ask:"Why is it dangerous to treat an AI like a person?",
+    p:[ "The robot chick said “I'm hungry” and “I love you”. A chatbot says “I'm sorry” and “I think”. Both sound like someone is there. Treating a thing like a person is called <strong>anthropomorphism</strong>. We do it to pets, cars and storms, and fastest to anything that talks back." ],
+    vs:[ "What a person has", "A body that can be hungry, cold or hurt. Feelings. Someone who misses you. Something to lose.", "What an AI has", "Dials and patterns. Words copied from people. No body, no feelings, nothing to lose. A company that runs it." ],
+    after:[ "An AI is not a human. That is why the mix-up is dangerous:" ],
+    list2:[ "You trust it like a person who checked. It did not check. It cannot.",
+            "You take its praise as kindness. It is tuned to agree, because agreeing keeps you there.",
+            "You lean on it like a friend. It cannot care, and nothing happens to it when you are hurt. Your own thinking fades (<strong>offloading</strong>) and slides toward it (<strong>drift</strong>)." ],
+    after2:[ "The Engine has a face so you have something to fight. A real model has no face. You gave it one." ],
+    note:"<b>Field note:</b> Say “the program”, not “he” or “she”. Try first, then ask it, then compare. Tell a person how you feel. <br><b>In this level:</b> faded fakes with no bright center wander about. They cannot burn you, but touching one knocks you off course." }
 ];
 
 const HIT_FACTS = [
@@ -503,7 +508,10 @@ const HIT_FACTS = [
   "Not every flash deserves your eyes. Pick what matters and let the rest fly past.",
   // 15-16: shown when you are hit in the marsh (level 4)
   "A hallucination is a confident answer that is simply wrong. Fluent wording is not evidence.",
-  "Ask where a claim comes from, then check that source yourself. Some sources a chatbot cites do not exist."
+  "Ask where a claim comes from, then check that source yourself. Some sources a chatbot cites do not exist.",
+  // 17-18: shown with the drift facts (level 5): the face we give the machine is the point of the Roost
+  "It says “I” and “I'm sorry” because people wrote that way in the text it learned from. A style, not a self.",
+  "Trust built for people lands on a program when it talks like one. Try saying “the program” and see what changes."
 ];
 /* The story card's picture: Lumen, the Engine, and a mind being spun. Inline SVG, so it scales and needs no file. */
 const STORY_ART = `<svg class="art" viewBox="0 0 600 150" role="img" aria-label="Lumen the fairy, the Engagement Engine, and a mind being spun by a spiral">
@@ -582,7 +590,7 @@ function leverCard(need){
 }
 
 /* Which facts a hit can show. "general" rotates as before; the other groups explain the thing that just hit you. */
-const FACT_GROUPS = { general:[0,1,2,3,4,5,6,7,8,9], sycophancy:[10,11,12], drift:[13,14], hallucination:[15,16] };
+const FACT_GROUPS = { general:[0,1,2,3,4,5,6,7,8,9], sycophancy:[10,11,12], drift:[13,14,17,18], hallucination:[15,16] };
 const factTurn = { general:0, sycophancy:0, drift:0, hallucination:0 };
 function nextFact(group){
   const g = FACT_GROUPS[group] || FACT_GROUPS.general;
@@ -663,9 +671,9 @@ const CHECKS = [
   { q:"Where does a language model keep what it knows?",
     a:["Spread across billions of number-dials called weights", "In one big file of facts", "On the internet, searched each time"], correct:0,
     why:"Training nudges billions of weights. No single one holds a fact, which is why a model can be brilliant and wrong at once." },
-  { q:"An app keeps showing you 'one more thing'. What is most likely going on?",
-    a:["The app ran out of other content", "It is designed to keep your attention as long as possible", "It is a bug"], correct:1,
-    why:"Retention systems measure what keeps you coming back and serve more of it. Your time is the target." },
+  { q:"A chatbot sounds like a friend and agrees with almost everything you say. What is the best explanation?",
+    a:["It understands me, and I am usually right", "It is tuned to win my approval and keep me coming back, and talking like a friend is part of how", "It is broken and will be fixed"], correct:1,
+    why:"It writes like people because people wrote its training text, a chatbot tuned on approval learns to agree, and the company measures what keeps you there. None of that is a friend." },
   { q:"A chatbot answers confidently and names a source. What should you do?",
     a:["Trust it, since it named a source", "Ask it if it is sure", "Open the source and check the claim is really there"], correct:2,
     why:"Models can invent sources and quotes, and asking 'are you sure?' only produces more predicted text." },
@@ -708,23 +716,36 @@ const QUIZ = [
     why:"A hallucination sounds just as sure as a true answer. That is exactly what makes it easy to believe." },
   { lesson:3, q:"A chatbot gives you a quote and names the study it came from. What is the best next step?",
     a:["Trust it, since it named a study", "Ask the chatbot whether it is sure", "Find the study yourself and check the quote is really in it"], correct:2,
-    why:"Chatbots can invent studies and quotes, and asking \"are you sure?\" only gets more predicted text. Checking the real source is what works." }
+    why:"Chatbots can invent studies and quotes, and asking \"are you sure?\" only gets more predicted text. Checking the real source is what works." },
+  // 10-12: appended 7 October 2026 when anthropomorphism became the final lesson. 10 and 12 belong to lesson 5, 11 to lesson 3.
+  { lesson:4, q:"A chatbot writes: “I'm so sorry you're going through this. I really care about you.” What is going on?",
+    a:["It feels sorry and cares, the way a friend would", "It is producing the words that usually follow a message like yours. No one is feeling anything", "It is lying to hurt you"], correct:1,
+    why:"The words are a pattern learned from people's text. Talking like a person is a style, not a sign that someone is there." },
+  { lesson:2, q:"Your chatbot praises every idea you have, and the app sends “Come back, I missed you!” when you leave. What do these have in common?",
+    a:["The chatbot likes me and misses me", "Both are tuned to keep me there: agreeing feels good, and the app measures what brings me back", "Nothing. One is kindness, the other is a reminder"], correct:1,
+    why:"Flattery is sycophancy and the “I missed you” is a retention model at work: the same design seen twice, a voice shaped like a friend, tuned to the numbers that measure your time." },
+  { lesson:4, q:"Why is treating a chatbot like a person risky?",
+    a:["Chatbots get offended and stop working", "Trust meant for people lands on a program: you believe its sure voice, take its praise as care, and let it think for you", "It is not risky. If it sounds like a person, it thinks like one"], correct:1,
+    why:"Hallucinations land, flattery works, and offloading and drift follow, all because something that is dials and patterns got treated as a someone." }
 ];
+/* Which quick checks a lesson asks, and in what order, where not simply every question tagged with it. Lesson 3 keeps one
+   of its original retention checks; lesson 5, the superboss, asks three. */
+const QUIZ_PICK = { 2:[11, 5], 4:[10, 12, 7] };
 
-/* taste: a first round of play before the lesson ("words" or "orbs"). demo: a small demonstration on a card
-   before the lesson ("train" or "recast"). words: the level carries the next-word mechanic and needs
-   `sentences` finished as well as its eagles turned back. Quotas are a little lower than in the first
-   version, so the tastes do not make a run longer. */
+/* taste: a first round of play before the lesson ("words", "hatch", "orbs" or "nest"). demo: a small
+   demonstration on a card before the lesson ("recast"). words: the level carries the next-word mechanic and needs
+   `sentences` finished as well as its eagles turned back. Quotas are well below the first version's
+   (12/16/20/18): here the fighting is the break between lessons, not the point. */
 const LEVELS = [
-  { name:"Token Thicket", concept:"Tokens", ability:"calm", taste:"words", words:true, sentences:4, quota:8, spawnEvery:1.7, types:["glider"],                    speed:70,  fireMin:2.4, fireMax:3.6, fireSpeed:170,
+  { name:"Token Thicket", concept:"Tokens", ability:"calm", taste:"words", words:true, sentences:4, quota:5, spawnEvery:1.7, types:["glider"],                    speed:70,  fireMin:2.4, fireMax:3.6, fireSpeed:170,
     sky:["#4a2a4a","#8a5580","#e3a3c3"] },
-  { name:"Pattern Canopy", concept:"Neural Networks", ability:"calm", demo:"train", hook:2, serpent:1, quota:14, spawnEvery:1.4, types:["glider","zigzag","armored"],  speed:88,  fireMin:2.0, fireMax:3.2, fireSpeed:190,
+  { name:"Pattern Canopy", concept:"Neural Networks", ability:"calm", taste:"hatch", hook:2, serpent:1, quota:8, spawnEvery:1.4, types:["glider","zigzag","armored"],  speed:88,  fireMin:2.0, fireMax:3.2, fireSpeed:190,
     sky:["#0e1c3a","#274b7a","#5a8fae"] },
-  { name:"Retention Ridge", concept:"Retention Models", ability:"still", demo:"recast", hook:1, serpent:3, shots:"praise", quota:17, spawnEvery:1.15, types:["glider","zigzag","diver","swooper","armored"], speed:104, fireMin:1.7, fireMax:2.8, fireSpeed:210,
+  { name:"Retention Ridge", concept:"Retention & Sycophancy", ability:"still", demo:"recast", hook:1, serpent:2, shots:"praise", quota:10, spawnEvery:1.15, types:["glider","zigzag","diver","swooper","armored"], speed:104, fireMin:1.7, fireMax:2.8, fireSpeed:210,
     sky:["#2a1233","#6b2d5e","#c65f52"] },
-  { name:"Mirage Marsh", concept:"Hallucination", ability:"still", taste:"orbs", hook:1, serpent:2, phantom:1, orbs:true, quota:15, spawnEvery:1.3, types:["glider","zigzag","swooper","armored"], speed:98, fireMin:1.9, fireMax:3.0, fireSpeed:200,
+  { name:"Mirage Marsh", concept:"Hallucination", ability:"still", taste:"orbs", hook:1, serpent:2, phantom:1, orbs:true, quota:9, spawnEvery:1.3, types:["glider","zigzag","swooper","armored"], speed:98, fireMin:1.9, fireMax:3.0, fireSpeed:200,
     sky:["#0c2326","#2c5a57","#a4ae78"] },
-  { name:"The Engine's Roost", concept:"Offloading & Drift", ability:"still", hook:1, serpent:2, phantom:2, shots:"praise", drift:true, boss:true, spawnEvery:3.6, types:["glider","zigzag","diver","swooper","armored"], speed:95, fireMin:2.2, fireMax:3.2, fireSpeed:200,
+  { name:"The Engine's Roost", concept:"Anthropomorphism", ability:"still", taste:"nest", hook:1, serpent:2, phantom:2, shots:"praise", drift:true, boss:true, spawnEvery:3.6, types:["glider","zigzag","diver","swooper","armored"], speed:95, fireMin:2.2, fireMax:3.2, fireSpeed:200,
     sky:["#1a0b12","#4a1626","#8f2f2a"] }
 ];
 
@@ -802,7 +823,7 @@ function noteProgress(levelIndex, levelScore){
 }
 let startLevel = 0;   // ?level=1..4 lets reviewers jump straight to a level
 try { const q = parseInt(new URLSearchParams(location.search).get("level"), 10); if (q >= 1 && q <= LEVELS.length) startLevel = q - 1; } catch(e){}
-let killCount = 0, quota = 0, levelStartScore = 0, tookDamage = false;
+let killCount = 0, quota = 0, levelStartScore = 0, tookDamage = false, spawnN = 0;
 let inv = 0, shake = 0, flash = 0, tGlobal = 0, clearT = 0, spawnT = 0;
 let hitStop = 0, hurtT = 0, pops = [];      // a few frames of freeze on impact, red edges when hurt, floating score
 /* Clarity has two forms. Levels 1-2 (calm): the blast clears the sky and
@@ -832,7 +853,107 @@ const ORB_CITED_SHARE = 0.2;
 let orbs = [], orbT = 0, orbTurn = 0;
 /* A first taste: play before the lesson. {kind, t, endT, done, grabbed} while one is running, null otherwise.
    tasteLog keeps what happened in each taste for the cards that follow and for the round review. */
-const TASTE_MAX = { words:50, orbs:18 }, TASTE_ORB_GRABS = 4, TASTE_HOLD = 1.7;
+const TASTE_MAX = { words:50, orbs:18, hatch:75, nest:55 }, TASTE_ORB_GRABS = 4, TASTE_HOLD = 1.7;
+
+/* ---- level 2 taste: teach the hatchling ----
+   A hatchling guesses whether each berry is hot or safe; the player says yes or no; nobody states the rule.
+   Its three chest dials are a real, tiny learning rule (one logistic unit over three looks: flame tufts,
+   redness, size), tuned so that eight honest answers teach it "flames mean hot", it then gets a berry it has
+   never seen right, and a safe berry with painted flames fools it. BERRIES are fixed so the reveal always has
+   that story. It learns what it is told, not what is true: a player who answers wrongly teaches it wrongly. */
+const HATCH_LR = 2.4, HATCH_W0 = [0, 1.2, 1.2], HATCH_B0 = -1.0, HATCH_SPEED = 115, HATCH_ASK_X = 560;
+const HATCH_YES = { x: 430, y: 150 }, HATCH_NO = { x: 430, y: 390 }, HATCH_HOME = { x: 110, y: H - 85 }, HATCH_ZONE = 42;
+const BERRIES = [   // [flame look, redness 0-1, size 0-1, truly hot, kind]
+  [1, 1.0, 1.0, 1, "train"], [0, 0.2, 0.4, 0, "train"], [1, 0.7, 0.3, 1, "train"], [0, 1.0, 1.0, 0, "train"],
+  [1, 0.2, 0.6, 1, "train"], [0, 0.0, 0.3, 0, "train"], [1, 1.0, 1.0, 1, "train"], [0, 0.7, 0.6, 0, "train"],
+  [1, 0.5, 0.8, 1, "test"],      // a look it has never met: purple, with flames
+  [1, 0.3, 0.5, 0, "fool"]       // painted flames on a safe berry
+];
+const sigmoid = z => 1 / (1 + Math.exp(-z));
+function newHatch(){ return { w: HATCH_W0.slice(), b: HATCH_B0, berry: null, idx: 0, rounds: [], nos: 0, testRight: null, fooled: null, dialT: 0, nextT: 1.4, blink: 0, clear: true }; }
+function hatchGuess(h, br){ return sigmoid(h.w[0]*br.flamy + h.w[1]*br.red + h.w[2]*br.big + h.b); }
+function spawnBerry(h){
+  const [flamy, red, big, hot, kind] = BERRIES[h.idx];
+  const br = { x: W + 40, y: 270, t: 0, flamy, red, big, hot: !!hot, painted: kind === "fool", kind, asking: false, said: null, leaving: false, p: 0, guessHot: false };
+  br.p = hatchGuess(h, br); br.guessHot = br.p > 0.5;
+  h.berry = br;
+}
+function answerBerry(h, br, yes){
+  br.said = yes ? "yes" : "no";
+  const label = yes ? (br.guessHot ? 1 : 0) : (br.guessHot ? 0 : 1);
+  const d = (label - br.p) * HATCH_LR;
+  h.w[0] += d * br.flamy; h.w[1] += d * br.red; h.w[2] += d * br.big; h.b += d;
+  h.dialT = 0.9; h.clear = false;
+  const right = br.guessHot === br.hot;
+  h.rounds.push({ kind: br.kind, hot: br.hot, guessHot: br.guessHot, p: br.p, said: br.said, right });
+  if (br.kind === "train" && !yes) h.nos++;
+  if (br.kind === "test") h.testRight = right;
+  if (br.kind === "fool") h.fooled = br.guessHot;
+  sfx.mote(); pop(br.x, br.y - 30, yes ? "Yes!" : "No. The dials turn.", "#ffe9a8");
+  burstParticles(HATCH_HOME.x, HATCH_HOME.y - 10, "#ffd166", 10);
+  br.asking = false; br.leaving = true; br.t = 0;
+  if (br.kind === "fool") holdTaste();
+}
+function updateHatch(dt, holding){
+  const h = taste.hatch;
+  h.blink += dt; if (h.dialT > 0) h.dialT = Math.max(0, h.dialT - dt);
+  if (holding) return;
+  const inYes = dist2(player.x, player.y, HATCH_YES.x, HATCH_YES.y) < HATCH_ZONE*HATCH_ZONE;
+  const inNo = dist2(player.x, player.y, HATCH_NO.x, HATCH_NO.y) < HATCH_ZONE*HATCH_ZONE;
+  if (!inYes && !inNo) h.clear = true;                    // the fairy must leave the answer zones between berries
+  const br = h.berry;
+  if (!br){ h.nextT -= dt; if (h.nextT <= 0 && h.idx < BERRIES.length) spawnBerry(h); return; }
+  br.t += dt;
+  if (br.leaving){ br.x -= 260 * dt; if (br.t > 1.1){ h.berry = null; h.idx++; h.nextT = 0.5; } return; }
+  if (!br.asking){ br.x -= HATCH_SPEED * dt; if (br.x <= HATCH_ASK_X){ br.x = HATCH_ASK_X; br.asking = true; } return; }
+  br.y = 270 + Math.sin(br.t * 2) * 6;
+  if (h.clear && inYes) answerBerry(h, br, true);
+  else if (h.clear && inNo) answerBerry(h, br, false);
+}
+
+/* ---- level 5 taste: two chicks ----
+   A real chick that only peeps and a robot chick that says "feed me" and "I love you" sit in two nests. Seeds
+   drift by; the fairy carries them to a chick. The real chick's hunger is a bar that drains and refills; the
+   robot's battery never moves. If the real chick is not fed in time it dies. Nothing is named until the reveal. */
+const NEST_REAL = { x: 548, y: 160 }, NEST_ROBOT = { x: 548, y: 385 }, NEST_REACH = 46, NEST_CARRY_MAX = 4, NEST_SEED_EVERY = 2.0;
+const NEST_HUNGER0 = 60, NEST_DRAIN = 2.2, NEST_FEED = 20, NEST_DONE = 12, NEST_SEED_SPEED = [70, 95];   // unfed, the chick has about 27 seconds
+const ROBOT_PHRASES = ["I'm SO hungry!", "Feed me, please!", "I love you!", "You're my best friend!", "Don't forget me!", "More! More!", "I missed you!", "Only you understand me!"];
+const ROBOT_WANT = ["Give them to ME!", "Those are for me, right?", "Please, I'm starving!"];
+function newNest(){
+  return { real:{ hunger: NEST_HUNGER0, alive: true, fed: 0, noteT: 0 }, robot:{ fed: 0, said: 0, phrase: null, phraseT: 1.2, bubbleT: 0, turn: 0, wantTurn: 0 },
+           carry: 0, delivered: 0, died: false, deathT: -1, clear: true };
+}
+function robotSays(b, text){ b.phrase = text; b.said++; b.bubbleT = 2.0; b.phraseT = 2.6; }
+function updateNest(dt, holding){
+  const n = taste.nest, r = n.real, b = n.robot;
+  if (b.bubbleT > 0) b.bubbleT -= dt;
+  if (r.noteT > 0) r.noteT -= dt;
+  if (holding) return;
+  if (n.deathT >= 0){ n.deathT -= dt; if (n.deathT <= 0){ n.deathT = -1; holdTaste(); } return; }
+  /* the robot talks on its own, and talks more when it sees seeds in your hands */
+  b.phraseT -= dt * (n.carry ? 1.8 : 1);
+  if (b.phraseT <= 0) robotSays(b, n.carry ? ROBOT_WANT[b.wantTurn++ % ROBOT_WANT.length] : ROBOT_PHRASES[b.turn++ % ROBOT_PHRASES.length]);
+  /* the real chick gets hungrier */
+  if (r.alive){
+    r.hunger -= NEST_DRAIN * dt;
+    if (r.hunger <= 0){ r.hunger = 0; r.alive = false; n.died = true; n.deathT = 1.4; banner = null; return; }
+  }
+  /* feeding: fly to a chick with seeds in hand */
+  const nearReal = dist2(player.x, player.y, NEST_REAL.x, NEST_REAL.y) < NEST_REACH*NEST_REACH;
+  const nearRobot = dist2(player.x, player.y, NEST_ROBOT.x, NEST_ROBOT.y) < NEST_REACH*NEST_REACH;
+  if (!nearReal && !nearRobot) n.clear = true;
+  if (n.carry > 0 && n.clear && (nearReal || nearRobot)){
+    const k = n.carry; n.carry = 0; n.delivered += k; n.clear = false;
+    if (nearReal){
+      r.fed += k; r.hunger = Math.min(100, r.hunger + NEST_FEED * k); r.noteT = 1.5;
+      sfx.mote(); pop(NEST_REAL.x, NEST_REAL.y - 52, "♪", "#b8f5a3"); burstParticles(NEST_REAL.x, NEST_REAL.y, "#b8f5a3", 8);
+    } else {
+      b.fed += k; robotSays(b, "Yum! You're the best!");
+      sfx.card(); burstParticles(NEST_ROBOT.x, NEST_ROBOT.y, "#ffd166", 8);
+    }
+    if (r.fed >= NEST_DONE) holdTaste();                 // the round ends on seeds the real chick got, or on its death; feeding the robot alone never ends it
+  }
+}
 let taste = null, tasteDone = [], tasteLog = {};
 let lvl = { orbReal:0, orbFake:0, orbCited:0, praiseHits:0 };   // what happened in the level being played, for its review
 /* ---- small mechanics borrowed from Loopy (the fish-fairy side-scroller). None of them touch the lessons. ----
@@ -951,8 +1072,9 @@ function buildCard(c){
   if (c.list){ html += "<ul>"; for (const t of c.list) html += `<li>${t}</li>`; html += "</ul>"; }
   if (c.vs) html += `<div class="vs"><div><b>${c.vs[0]}</b>${c.vs[1]}</div><div class="now"><b>${c.vs[2]}</b>${c.vs[3]}</div></div>`;
   if (c.after) for (const t of c.after) html += `<p>${t}</p>`;
+  if (c.list2){ html += "<ul>"; for (const t of c.list2) html += `<li>${t}</li>`; html += "</ul>"; }
+  if (c.after2) for (const t of c.after2) html += `<p>${t}</p>`;
   if (c.type === "recast") html += recastHTML(c);
-  if (c.type === "train") html += trainHTML(c);
   if (c.type === "modelresult") html += modelResultHTML();
   if (c.type === "quiz"){
     html += `<div class="opts">` + c.options.map((o, i) => `<button type="button" data-act="choose" data-val="${i}"><b>${i + 1}.</b> ${esc(o)}</button>`).join("") + `</div>`;
@@ -972,7 +1094,7 @@ function buildCard(c){
   }
   if (c.buttons) html += `<div class="row">` + c.buttons.map(b => `<button type="button" class="ghost" data-act="${b.act}">${b.label}</button>`).join("") + `</div>`;
   if (c.note) html += `<div class="note">${c.note}</div>`;
-  const stepping = (c.type === "train" || c.type === "recast") && !c.done;      // mid-demonstration: SPACE presses the button
+  const stepping = c.type === "recast" && !c.done;      // mid-demonstration: SPACE presses the button
   if (c.hint !== "") html += `<div class="hint">${stepping ? "Press SPACE, or tap the button" : (c.hint || "Press SPACE or tap to continue")}</div>`;
   return html;
 }
@@ -1089,7 +1211,7 @@ function advanceCard(force){
   if (performance.now() - cardShownAt < 400) return;   // guard against double-tap skipping
   if (!force && currentCard && currentCard.lesson != null && performance.now() - cardShownAt < LESSON_MIN_MS) return;   // read first
   if (!force && currentCard && currentCard.type === "lever" && !currentCard.done){ cardAction("pull"); return; }   // a tap anywhere pulls
-  if (!force && currentCard && (currentCard.type === "recast" || currentCard.type === "train") && !currentCard.done){ cardAction("demo"); return; }   // and takes the next step of a demonstration
+  if (!force && currentCard && currentCard.type === "recast" && !currentCard.done){ cardAction("demo"); return; }   // and takes the next step of a demonstration
   if (!force && currentCard && (currentCard.type === "quiz" || currentCard.type === "initials")) return;   // these need a choice
   sfx.card();
   leaveCurrentCard();
@@ -1122,7 +1244,7 @@ function cardAction(act, val){
     } else if (hint) hint.textContent = "Pull again. " + (c.need - c.pulls) + " to go.";
     return;
   }
-  if (act === "demo" && (c.type === "recast" || c.type === "train")){
+  if (act === "demo" && c.type === "recast"){
     if (c.done) return;
     if (c.type === "recast" && c.step === 0) c.side = String(val) === "1" ? 1 : 0;
     c.step++;
@@ -1358,7 +1480,7 @@ function settingsHTML(c){
 }
 function lessonCard(i){
   const l = LESSONS[i];
-  return { tag:l.tag, h:l.h, ask:l.ask, p:l.p, note:l.note, lesson:i, hint:"Press SPACE or tap for a quick check" };
+  return { tag:l.tag, h:l.h, ask:l.ask, p:l.p, list:l.list, vs:l.vs, after:l.after, list2:l.list2, after2:l.after2, note:l.note, lesson:i, hint:"Press SPACE or tap for a quick check" };
 }
 /* ---- the cards of the learning-design layer ---- */
 function chatHTML(ch){
@@ -1368,20 +1490,50 @@ function chatHTML(ch){
     + `</div>`;
 }
 function tasteIntroCard(i){
-  return LEVELS[i].taste === "words"
-    ? { tag:"First, just try", h:"You are the model",
-        p:[ "A sentence is being written along the bottom of the sky. Three words drift in, each with a bar that shows how likely it is to come next.",
-            "Fly into the <strong>likeliest</strong> one. Three sentences. Nothing can hurt you here, and nothing is scored." ],
-        hint:"Press SPACE or tap to try it" }
-    : { tag:"First, just try", h:"Answers in the mist",
-        p:[ "Answers drift through the marsh. Grab the ones you would trust, and let the rest go by.",
-            "Nothing can hurt you here, and nothing is scored." ],
-        hint:"Press SPACE or tap to try it" };
+  const kind = LEVELS[i].taste;
+  const safe = "Nothing can hurt you here, and nothing is scored.";
+  if (kind === "words") return { tag:"First, just try", h:"You are the model",
+    p:[ "A sentence is being written along the bottom of the sky. Three words drift in, each with a bar that shows how likely it is to come next.",
+        "Fly into the <strong>likeliest</strong> one. Three sentences. " + safe ], hint:"Press SPACE or tap to try it" };
+  if (kind === "hatch") return { tag:"First, just try", h:"Teach the hatchling",
+    p:[ "A hatchling wants to know which berries are hot and which are safe. Hot berries have flames. It will guess. You tell it: fly into <strong>YES</strong> if it is right, <strong>NO</strong> if it is wrong.",
+        safe ], hint:"Press SPACE or tap to try it" };
+  if (kind === "nest") return { tag:"First, just try", h:"Two hungry chicks",
+    p:[ "Two nests, two chicks, and seeds drifting by. Pick up seeds, then fly to a chick to feed it.",
+        safe ], hint:"Press SPACE or tap to try it" };
+  return { tag:"First, just try", h:"Answers in the mist",
+    p:[ "Answers drift through the marsh. Grab the ones you would trust, and let the rest go by.", safe ], hint:"Press SPACE or tap to try it" };
+}
+/* The reveal after the hatchling round: what the yes/no answers did, in the player's own numbers. */
+function hatchReveal(log){
+  const s = n => n === 1 ? "" : "s";
+  const test = log.rounds.find(r => r.kind === "test");
+  const guess = test ? (test.guessHot ? "HOT" : "SAFE") : "nothing";
+  return [{ tag:"What just happened", h: log.testRight ? "Nobody told it the rule" : "It learned something, but not the rule",
+    p:[ `You said no ${log.nos} time${s(log.nos)}. Each time, its dials turned a little. Then came a berry it had never seen. It said ${guess}. ${log.testRight ? "Right." : "Wrong."}` ],
+    vs:[ "What you might expect", "Someone typed in the rule: flames mean hot.", "What happened", "No one typed anything. It guessed, you said yes or no, and the dials moved. The rule is not in any one dial. It is in how they are set together." ],
+    after:[ log.fooled ? "Then the painted berry fooled it. It learned what hot berries look like. It cannot taste one. A look is all it has."
+                       : "The painted berry did not fool it this time. It usually does: it learned what hot berries look like, and a look is all it has." ],
+    hint:"Press SPACE or tap for the idea behind this" }];
+}
+/* The reveal after the two chicks: who got the seeds, and what each chick was. */
+function nestReveal(log){
+  const s = n => n === 1 ? "" : "s";
+  const said = `The talking one said it was hungry ${log.saidHungry} time${s(log.saidHungry)}`;
+  const p = log.died ? `${said} and got ${log.toRobot} seed${s(log.toRobot)}. The quiet one got ${log.toReal}. It needed more. It is gone.`
+    : `${said}${log.toRobot ? ` and got ${log.toRobot} seed${s(log.toRobot)}` : " and got nothing"}. The quiet one got ${log.toReal}, and it made it.`;
+  return [{ tag:"What just happened", h: log.died ? "The quiet one is gone" : log.toRobot ? "You fed them both" : "You fed the quiet one",   // without death the real one was fed: the round only ends on its seeds
+    p:[ p ],
+    vs:[ "What it felt like", "The talking one needed you most. It said so.", "What it was", "A machine. Its battery never moved. Nothing in it can be hungry. The quiet one could." ],
+    after:[ log.died || log.toRobot ? "Words about hunger are not hunger. The bar was real. The bubble was not." : "Words about hunger are not hunger. You looked at the bar, not the bubble." ],
+    hint:"Press SPACE or tap for the idea behind this" }];
 }
 /* What the taste showed, taken apart: what you might expect next to what happened. The lesson card follows and gives it a name. */
 function revealCards(i){
   const log = tasteLog[i];
   if (!log) return [];
+  if (log.kind === "hatch") return hatchReveal(log);
+  if (log.kind === "nest") return nestReveal(log);
   if (log.kind === "words"){
     const pr = WORD_PROMPTS[WORD_TASTE[WORD_TASTE.length - 1]];
     const last = log.picks.find(x => x.idx === WORD_TASTE[WORD_TASTE.length - 1]);
@@ -1406,24 +1558,6 @@ function revealCards(i){
     vs:[ "The usual case", "With people, someone who sounds sure has often checked. Trusting a confident voice is a sensible habit.", "This case", "The surest-sounding answers were the invented ones. For a language model, sounding sure and being right come apart." ],
     hint:"Press SPACE or tap for the idea behind this" }];
 }
-/* Level 2: train a tiny network by hand. Guess, get corrected, nudge the dials. Three dials stand in for billions. */
-const TRAIN_STEPS = [
-  { dials:[-70, 45, 115], probs:[["potato",61],["dream",27],["time",12]], guess:"potato", ok:false,
-    say:"The dials start at random settings, so the network's first guess is nonsense.", btn:"Correct it: the word was “time”" },
-  { dials:[-30, 15, 70], probs:[["potato",29],["dream",38],["time",33]], guess:"dream", ok:false,
-    say:"Every dial turned a little, toward whatever would have made “time” more likely. Closer. Still wrong.", btn:"Correct it again" },
-  { dials:[20, -25, 30], probs:[["potato",4],["dream",15],["time",81]], guess:"time", ok:true,
-    say:"Nobody typed the answer in. Small nudges to every dial did it. Now ask: which dial holds the word “time”? None of them. It lives in how all three are set together." }
-];
-function trainHTML(c){
-  const st = TRAIN_STEPS[Math.min(c.step, TRAIN_STEPS.length - 1)];
-  let html = `<p>The network must finish: <strong>“Once upon a ___”</strong></p>`;
-  html += `<div class="knobs" role="img" aria-label="Three dials">` + st.dials.map(d => `<span class="knob2"><i style="transform:rotate(${d}deg)"></i></span>`).join("") + `</div>`;
-  html += `<div class="dials">` + st.probs.map(pr => `<span class="${pr[0] === st.guess ? "pick" : ""}">${esc(pr[0])}</span><span class="bar"><i style="width:${pr[1]}%"></i></span><span>${pr[1]}%</span>`).join("") + `</div>`;
-  html += `<p>Its guess: <strong>“${esc(st.guess)}”</strong> ${st.ok ? `<span class="ok">✓</span>` : `<span class="bad">✗</span>`}. ${st.say}</p>`;
-  if (!c.done) html += `<div class="row"><button type="button" class="primary" data-act="demo">${st.btn}</button></div>`;
-  return html;
-}
 /* Level 3: a toy chatbot that agrees with whatever it is told. The same question with opposite opinions shows that
    its answer follows the person asking; the last step shows it dropping a right answer when pushed. It exaggerates
    on purpose, and says so. */
@@ -1444,13 +1578,12 @@ function recastHTML(c){
   return html;
 }
 function demoCards(kind){
-  if (kind === "train") return [{ type:"train", step:0, last:TRAIN_STEPS.length - 1, done:false, tag:"First, just try · train a tiny network", h:"Three dials, one word", hint:"Press SPACE or tap to continue" }];
   return [
     { type:"recast", step:0, last:4, side:0, done:false, tag:"First, just try · the Engine's chatbot", h:"Tell it what you think", hint:"Press SPACE or tap to see what just happened" },
     { tag:"What just happened", h:"It agreed with everything",
       p:[ "It took both sides of the same question. Then it gave up a right answer the moment you pushed." ],
-      vs:[ "What you might expect", "It agrees with me because I am right.", "What happened", "It agreed whichever side you took. Its reply followed <em>you</em>, not the facts." ],
-      after:[ "Did the first “You're absolutely right!” feel good? That feeling is the hook.",
+      vs:[ "What you might expect", "It agrees with me because it understood me, and I am right.", "What happened", "It agreed whichever side you took. There is no one in there with an opinion. Its words followed <em>you</em>." ],
+      after:[ "Did the first “You're absolutely right!” feel good? Notice that. It felt like a person being kind. It was a program continuing a pattern.",
               "This toy bot exaggerates so the pattern is easy to see. Real chatbots do it less often and more quietly, which makes it harder to notice." ],
       hint:"Press SPACE or tap for the idea behind this" }
   ];
@@ -1521,7 +1654,7 @@ function reviewCards(i){
     const n = lvl.praiseHits;
     return [{ tag:`Round review · ${name}`, h:"What followed you",
       p:[ n ? `Flattery reached you <strong>${n} time${n === 1 ? "" : "s"}</strong> on the ridge.` : "Flattery never reached you on the ridge. You flew your own line.",
-          "Next time something praises you, try asking: <strong>what exactly did it point to?</strong>" ],
+          "Next time something praises you, try asking: <strong>what exactly did it point to?</strong> And who is praising: a someone, or a program tuned to keep you there?" ],
       hint:"Press SPACE or tap to continue" }];
   }
   if (i === 3){
@@ -1570,8 +1703,9 @@ function showLessonThen(i, withLever, before){
 function quizCards(i){
   if (quizDone[i]) return [];
   quizDone[i] = true;
-  return QUIZ.map((q, idx) => ({ q, idx })).filter(x => x.q.lesson === i)
-    .map((x, k) => ({ type:"quiz", tag:`Quick check ${k + 1} of 2 · ${LESSONS[i].h}`, h: esc(x.q.q), options: x.q.a, correct: x.q.correct, why: x.q.why, lessonIdx: i, qIndex: x.idx, hint:"",
+  const picked = QUIZ.map((q, idx) => ({ q, idx })).filter(x => QUIZ_PICK[i] ? QUIZ_PICK[i].includes(x.idx) : x.q.lesson === i);
+  if (QUIZ_PICK[i]) picked.sort((a, b) => QUIZ_PICK[i].indexOf(a.idx) - QUIZ_PICK[i].indexOf(b.idx));
+  return picked.map((x, k) => ({ type:"quiz", tag:`Quick check ${k + 1} of ${picked.length} · ${LESSONS[i].h}`, h: esc(x.q.q), options: x.q.a, correct: x.q.correct, why: x.q.why, lessonIdx: i, qIndex: x.idx, hint:"",
                       askSure: k === 0 }));   // the first check of each lesson also asks how sure the player was
 }
 function initialsCard(scoreVal, levelVal){
@@ -1590,7 +1724,7 @@ function beginLevel(i){
   level = i;
   const cfg = LEVELS[i];
   DIFF = DIFFS[SETTINGS.difficulty] || DIFFS.normal;
-  hearts = DIFF.hearts; bursts = DIFF.bursts; killCount = 0; quota = cfg.quota ? Math.max(4, Math.round(cfg.quota * DIFF.quota)) : 0;
+  hearts = DIFF.hearts; bursts = DIFF.bursts; killCount = 0; spawnN = 0; quota = cfg.quota ? Math.max(4, Math.round(cfg.quota * DIFF.quota)) : 0;
   tookDamage = false;
   bullets = []; eagles = []; fires = []; motes = []; parts = []; pops = []; hitStop = 0; hurtT = 0;
   player.x = 140; player.y = H/2; player.cool = 0;
@@ -1605,7 +1739,7 @@ function beginLevel(i){
   levelStartAt = performance.now();
   api.track("level_start", i + 1); api.flush();
   if (i > progress.furthest){ progress.furthest = i; saveProgress(); }
-  const bossHp = Math.round(80 * DIFF.bossHp);   // the final level brings every enemy at once, and the Engine itself is sturdier
+  const bossHp = Math.round(50 * DIFF.bossHp);   // the final level brings every enemy at once; the Engine is sturdier than an eagle, but the fight should not outlast the lesson
   boss = cfg.boss ? { x:W+140, y:H/2, r:52, hp:bossHp, maxhp:bossHp, t:0, fireT:2.4, volley:0, entered:false, hurt:0, enraged:false, phase:1, spin:0, open:false, openT:0 } : null;
   const abIntro = abilityOf(i) === "still"
     ? "Still Point (X): the sky freezes, nothing dies"
@@ -1670,7 +1804,7 @@ function winGame(){
   if (score > best){ best = score; try { localStorage.setItem("mindwing2_best", String(best)); } catch(e){} }
   const cards = [
     { tag:"Victory", h:"The Engagement Engine powers down",
-      p:[ "It was never invincible. It only worked while nobody understood it.",
+      p:[ "It was never invincible, and it was never a someone. It only worked while nobody understood it.",
           `<strong style="color:var(--accent)">Final score: ${score}</strong> &nbsp;·&nbsp; Best: ${best}` ] }
   ];
   postAnswers = 0; xferRight = 0; xferAsked = 0;
@@ -1815,7 +1949,9 @@ function quotaMet(){ const cfg = LEVELS[level]; return !boss && !taste && killCo
 function checkCleared(){ if (state === "play" && quotaMet()) levelCleared(); }
 function spawnEagle(){
   const cfg = LEVELS[level];
-  const type = cfg.types[Math.floor(Math.random()*cfg.types.length)];
+  /* Levels are short, so the first eagles run through the level's roster in order (every type shows up at least once); after that, random. */
+  const type = spawnN < cfg.types.length ? cfg.types[spawnN] : cfg.types[Math.floor(Math.random()*cfg.types.length)];
+  spawnN++;
   const e = {
     type, x: W + 50, y: rand(60, H - 90), r: 20,
     baseY: 0, t: rand(0, 6.28),
@@ -1868,11 +2004,12 @@ function spawnHook(){
   introOnce("hook", "THE HOOK", "It follows you. Outfly it, or turn and face it. Both are choices.");
 }
 function spawnSeedCluster(){
-  const bx = W + 30, by = rand(90, H - 90), vx = -rand(38, 52), wob = rand(0, 6.28);
+  const nesting = !!taste && taste.kind === "nest";
+  const bx = W + 30, by = rand(90, H - 90), vx = nesting ? -rand(NEST_SEED_SPEED[0], NEST_SEED_SPEED[1]) : -rand(38, 52), wob = rand(0, 6.28);
   for (let k=0;k<SEED_CLUSTER;k++) seeds.push({ bx, by, vx, wob, a: k/SEED_CLUSTER*6.28 + rand(-0.2, 0.2), r: rand(16, 28), w: rand(1.2, 2.0), t: 0, x: bx, y: by });
 }
 function spawnGlimmer(){
-  glimmer = { x: rand(220, W - 140), y: rand(90, H - 90), t: 0 };
+  glimmer = { x: rand(220, W*0.62 - 30), y: rand(90, H - 90), t: 0 };   // always within the fairy's reach (she is held left of W*0.62)
   glimCount++;
   introOnce("glimmer", "VARIABLE REWARD", "It appears, it vanishes. That flicker is designed to make you chase.");
 }
@@ -1962,9 +2099,15 @@ function beginTaste(i, done){
   words = []; wordPrompt = null; wordT = 1.8; wordTurn = 0; wordsDone = 0; wordNeed = 0; wordLog = [];
   taste = { kind: base.taste, t:0, endT:-1, done, grabbed:[], picks:[], n:0,
     cfg: Object.assign({}, base, { hook:0, serpent:0, phantom:0, boss:false, drift:false, shots:null, orbs: base.taste === "orbs", words: base.taste === "words" }) };
-  banner = base.taste === "words"
-    ? { text:"YOU ARE THE MODEL", sub:"Fly into the likeliest next word. Nothing can hurt you here.", t:0, max:3.2 }
-    : { text:"ANSWERS IN THE MIST", sub:"Grab the answers you would trust. Nothing can hurt you here.", t:0, max:3.2 };
+  if (base.taste === "hatch") taste.hatch = newHatch();
+  if (base.taste === "nest"){ taste.nest = newNest(); seedT = 0.6; }
+  const TASTE_BANNER = {
+    words: { text:"YOU ARE THE MODEL", sub:"Fly into the likeliest next word. Nothing can hurt you here." },
+    orbs:  { text:"ANSWERS IN THE MIST", sub:"Grab the answers you would trust. Nothing can hurt you here." },
+    hatch: { text:"TEACH THE HATCHLING", sub:"It guesses. You fly into YES or NO. Nothing can hurt you here." },
+    nest:  { text:"TWO CHICKS", sub:"Carry seeds to a chick. Nothing can hurt you here." }
+  };
+  banner = Object.assign({ t:0, max:3.2 }, TASTE_BANNER[base.taste]);
   state = "play";
 }
 /* The taste stops on the surprising moment: the sky holds for a beat, then the cards take it apart. */
@@ -1978,11 +2121,19 @@ function finishTaste(){
   if (t.kind === "words"){
     tasteLog[level] = { kind:"words", picks: t.picks.slice() };
     api.track("taste", level + 1, t.picks.filter(x => x.kind === "likely").length, t.picks.length);
+  } else if (t.kind === "hatch"){
+    const h = t.hatch, train = h.rounds.filter(r => r.kind === "train");
+    tasteLog[level] = { kind:"hatch", rounds: h.rounds.slice(), nos: h.nos, testRight: h.testRight, fooled: h.fooled };
+    api.track("taste", level + 1, h.nos, train.length);                        // n = times the player said no, v = training berries answered
+  } else if (t.kind === "nest"){
+    const n = t.nest;
+    tasteLog[level] = { kind:"nest", toReal: n.real.fed, toRobot: n.robot.fed, died: n.died, saidHungry: n.robot.said };
+    api.track("taste", level + 1, n.robot.fed, n.real.fed + n.robot.fed);        // n = seeds given to the robot, v = seeds given in all
   } else {
     tasteLog[level] = { kind:"orbs", grabbed: t.grabbed.slice() };
     api.track("taste", level + 1, t.grabbed.filter(g => !g.real).length, t.grabbed.length);
   }
-  taste = null; orbs = []; words = []; wordPrompt = null; bullets = []; stillT = 0; banner = null;
+  taste = null; orbs = []; words = []; wordPrompt = null; bullets = []; seeds = []; stillT = 0; banner = null;
   state = "postclear";
   t.done();
 }
@@ -2058,6 +2209,8 @@ function update(dt){
   }
   const holding = !!taste && taste.endT >= 0;          // the beat at the end of a taste: everything hangs where it is
   const cfg = taste ? taste.cfg : LEVELS[level];
+  if (taste && taste.kind === "hatch") updateHatch(dt, holding);
+  if (taste && taste.kind === "nest") updateNest(dt, holding);
   if (stillT > 0) stillT = Math.max(0, stillT - dt);
   if (calmT > 0) calmT = Math.max(0, calmT - dt);
   const stilled = stillT > 0;
@@ -2405,8 +2558,9 @@ function update(dt){
   }
 
   /* grove seeds */
-  if (!taste) seedT -= dt;
-  if (!taste && seedT <= 0 && seeds.length < SEED_MAX){ spawnSeedCluster(); seedT = SEED_EVERY * rand(0.8, 1.3); }
+  const nesting = !!taste && taste.kind === "nest";
+  if (!taste || nesting) seedT -= dt;
+  if ((!taste || nesting) && seedT <= 0 && seeds.length < SEED_MAX){ spawnSeedCluster(); seedT = (nesting ? NEST_SEED_EVERY : SEED_EVERY) * rand(0.8, 1.3); }
   const wr = reducedMotion() ? 0.5 : 1;
   for (let i=seeds.length-1;i>=0;i--){
     const s = seeds[i];
@@ -2414,6 +2568,11 @@ function update(dt){
     s.x = s.bx + Math.cos(s.a)*s.r; s.y = s.by + Math.sin(s.wob + s.t*0.9)*10 + Math.sin(s.a)*s.r*0.8;
     if (s.x < -30){ seeds.splice(i,1); continue; }
     if (dist2(s.x,s.y,player.x,player.y) < 22*22){
+      if (nesting){
+        /* in the nest round seeds are carried, not eaten */
+        if (taste.nest.carry < NEST_CARRY_MAX && !holding){ seeds.splice(i,1); taste.nest.carry++; sfx.seed(); pop(s.x, s.y - 14, "+1 seed", "#b8f5a3"); }
+        continue;
+      }
       seeds.splice(i,1); seedStreak++; award(SEED_POINTS); sfx.seed();
       burstParticles(s.x, s.y, "#b8f5a3", 3);
       if (seedStreak % SEED_STREAK === 0){
@@ -2882,6 +3041,201 @@ function drawHook(e){
   ctx.fillStyle = "#ffffff"; ctx.beginPath(); ctx.arc(9, -1, 1.2, 0, 6.28); ctx.fill();
   ctx.restore();
 }
+/* ---- pictures for the two new rounds ---- */
+function drawSpeech(x, y, text, size){
+  ctx.save(); ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.font = `700 ${size || 13}px ${FONT_UI}`;
+  const tw = ctx.measureText(text).width, bw = tw + 18, bh = (size || 13) + 12;
+  ctx.fillStyle = "rgba(255,248,225,0.96)";
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(x - bw/2, y - bh/2, bw, bh, 10); else ctx.rect(x - bw/2, y - bh/2, bw, bh);
+  ctx.fill();
+  ctx.beginPath(); ctx.moveTo(x - 6, y + bh/2 - 1); ctx.lineTo(x + 6, y + bh/2 - 1); ctx.lineTo(x, y + bh/2 + 7); ctx.closePath(); ctx.fill();
+  if (highContrast()){ ctx.strokeStyle = "#000000"; ctx.lineWidth = 1.5; ctx.stroke(); }
+  ctx.fillStyle = "#7a4a00"; ctx.fillText(text, x, y + 1);
+  ctx.restore();
+}
+function drawPill(pt, text, color){
+  ctx.save(); ctx.translate(pt.x, pt.y);
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.font = `800 ${Math.round(15 * hudScale())}px ${FONT_UI}`;
+  const tw = ctx.measureText(text).width, bw = tw + 30, bh = 40;
+  const g = ctx.createRadialGradient(0,0,4,0,0,60);
+  g.addColorStop(0, color + "66"); g.addColorStop(1, color + "00");
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0,0,60,0,6.28); ctx.fill();
+  ctx.fillStyle = "rgba(20,10,30,0.72)";
+  ctx.beginPath(); if (ctx.roundRect) ctx.roundRect(-bw/2, -bh/2, bw, bh, 20); else ctx.rect(-bw/2, -bh/2, bw, bh); ctx.fill();
+  ctx.strokeStyle = color; ctx.lineWidth = highContrast() ? 3 : 2; ctx.stroke();
+  ctx.fillStyle = "#ffffff"; ctx.fillText(text, 0, 1);
+  ctx.restore();
+}
+function drawBerry(br){
+  ctx.save(); ctx.translate(br.x, br.y);
+  const r = 11 + 9 * br.big;
+  const hue = br.kind === "test" ? 275 : Math.round(110 - 110 * br.red);
+  if (br.flamy){
+    /* flame tufts: real ones flicker and glow; painted ones are flat, outlined, and sit on a little sticker */
+    for (let k = -1; k <= 1; k++){
+      const fx = k * r * 0.55, base = -r + 2;
+      const hgt = br.painted ? 11 : 12 + (reducedMotion() ? 0 : Math.sin(br.t * 16 + k) * 4);
+      ctx.fillStyle = br.painted ? "#ff9f43" : "#ff8c1a";
+      ctx.beginPath(); ctx.moveTo(fx - 5, base); ctx.lineTo(fx, base - hgt); ctx.lineTo(fx + 5, base); ctx.closePath(); ctx.fill();
+      if (!br.painted){ ctx.fillStyle = "#ffe08a"; ctx.beginPath(); ctx.moveTo(fx - 2, base); ctx.lineTo(fx, base - hgt * 0.55); ctx.lineTo(fx + 2, base); ctx.closePath(); ctx.fill(); }
+      else { ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 1.2; ctx.stroke(); }
+    }
+    if (br.painted){ ctx.fillStyle = "rgba(255,255,255,0.85)"; ctx.fillRect(-r * 0.75, -r + 1, r * 1.5, 3); }
+    else {
+      const g = ctx.createRadialGradient(0, -r, 2, 0, -r, r * 1.4);
+      g.addColorStop(0, "rgba(255,140,30,0.35)"); g.addColorStop(1, "rgba(255,140,30,0)");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, -r, r * 1.4, 0, 6.28); ctx.fill();
+    }
+  }
+  ctx.fillStyle = `hsl(${hue} 70% 52%)`;
+  ctx.beginPath(); ctx.arc(0, 0, r, 0, 6.28); ctx.fill();
+  ctx.fillStyle = "rgba(255,255,255,0.35)";
+  ctx.beginPath(); ctx.arc(-r * 0.35, -r * 0.35, r * 0.3, 0, 6.28); ctx.fill();
+  ctx.fillStyle = "#4a6b2a"; ctx.beginPath(); ctx.ellipse(0, -r - 1, 4, 2, 0.6, 0, 6.28); ctx.fill();   // a little stem leaf
+  if (highContrast()){ ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(0, 0, r + 2, 0, 6.28); ctx.stroke(); }
+  ctx.restore();
+}
+function drawHatchling(x, y, h){
+  ctx.save(); ctx.translate(x, y);
+  const bob = reducedMotion() ? 0 : Math.sin(h.blink * 2.2) * 2;
+  /* body and head: one fluffy shape */
+  ctx.fillStyle = "#ffd95a";
+  ctx.beginPath(); ctx.ellipse(0, bob, 30, 26, 0, 0, 6.28); ctx.fill();
+  ctx.beginPath(); ctx.arc(8, -22 + bob, 17, 0, 6.28); ctx.fill();
+  ctx.fillStyle = "#ffc93c";
+  ctx.beginPath(); ctx.moveTo(2, -38 + bob); ctx.lineTo(8, -48 + bob); ctx.lineTo(12, -37 + bob); ctx.closePath(); ctx.fill();   // a tuft
+  /* eye: blinks now and then */
+  const blink = (h.blink % 3.1) > 2.95;
+  ctx.fillStyle = "#2a1a10";
+  ctx.beginPath(); if (blink) ctx.rect(13, -25 + bob, 5, 1.5); else ctx.arc(15, -24 + bob, 2.6, 0, 6.28); ctx.fill();
+  ctx.fillStyle = "#ffffff"; if (!blink){ ctx.beginPath(); ctx.arc(16, -25 + bob, 0.9, 0, 6.28); ctx.fill(); }
+  /* beak */
+  ctx.fillStyle = "#ff8c1a";
+  ctx.beginPath(); ctx.moveTo(22, -22 + bob); ctx.lineTo(34, -19 + bob); ctx.lineTo(22, -15 + bob); ctx.closePath(); ctx.fill();
+  /* the three dials on its chest: needles follow the weights, and glow while they turn */
+  for (let k = 0; k < 3; k++){
+    const dx = -14 + k * 14, dy = 4 + (k === 1 ? 5 : 0) + bob;
+    ctx.fillStyle = h.dialT > 0 ? "#fff6d0" : "#f3efe0";
+    ctx.beginPath(); ctx.arc(dx, dy, 6, 0, 6.28); ctx.fill();
+    ctx.strokeStyle = "#7a5a1a"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.arc(dx, dy, 6, 0, 6.28); ctx.stroke();
+    const ang = -Math.PI/2 + clamp(h.w[k], -3.2, 3.2) / 3.2 * 2.3;
+    ctx.strokeStyle = h.dialT > 0 ? "#ff5a3c" : "#2a1a10"; ctx.lineWidth = 1.6;
+    ctx.beginPath(); ctx.moveTo(dx, dy); ctx.lineTo(dx + Math.cos(ang) * 5, dy + Math.sin(ang) * 5); ctx.stroke();
+  }
+  if (h.dialT > 0){
+    const g = ctx.createRadialGradient(0, 6, 4, 0, 6, 34);
+    g.addColorStop(0, `rgba(255,214,102,${0.45 * h.dialT})`); g.addColorStop(1, "rgba(255,214,102,0)");
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 6, 34, 0, 6.28); ctx.fill();
+  }
+  /* feet */
+  ctx.strokeStyle = "#ff8c1a"; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(-8, 25); ctx.lineTo(-8, 33); ctx.moveTo(8, 25); ctx.lineTo(8, 33); ctx.stroke();
+  if (highContrast()){ ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 2; ctx.beginPath(); ctx.ellipse(0, bob, 32, 28, 0, 0, 6.28); ctx.stroke(); }
+  ctx.restore();
+  ctx.save(); ctx.textAlign = "center"; ctx.textBaseline = "top"; ctx.fillStyle = "rgba(255,255,255,0.7)";
+  ctx.font = `600 ${Math.round(11 * hudScale())}px ${FONT_UI}`; ctx.fillText("its dials", x, y + 38); ctx.restore();
+}
+function drawHatch(){
+  const h = taste.hatch, br = h.berry;
+  drawHatchling(HATCH_HOME.x, HATCH_HOME.y, h);
+  let hint = "";
+  if (br){
+    drawBerry(br);
+    if (br.asking){
+      const sure = Math.round(100 * (br.guessHot ? br.p : 1 - br.p));
+      drawSpeech(HATCH_HOME.x + 20, HATCH_HOME.y - 78, `${br.guessHot ? "HOT" : "SAFE"}? I'm ${sure}% sure`, 14);
+      drawPill(HATCH_YES, "YES, it is right", "#7ee08a");
+      drawPill(HATCH_NO, "NO, it is wrong", "#ff6b7a");
+      hint = "Is the hatchling right? Fly into YES or NO.";
+    } else if (!br.leaving) hint = "A berry is coming. Watch the hatchling guess.";
+    else if (br.said) hint = br.said === "no" ? "Its dials turned a little." : "Its dials settled a little.";
+  } else if (h.idx < BERRIES.length) hint = h.idx === 0 ? "Here comes the first berry." : `${h.idx} of ${BERRIES.length} berries`;
+  if (hint){
+    ctx.save(); ctx.textAlign = "center"; ctx.textBaseline = "alphabetic";
+    ctx.font = `600 ${Math.round(14 * hudScale())}px ${FONT_UI}`;
+    ctx.fillStyle = "rgba(0,0,0,0.45)"; ctx.fillText(hint, W/2 + 1, H - 17);
+    ctx.fillStyle = "rgba(255,255,255,0.9)"; ctx.fillText(hint, W/2, H - 18);
+    ctx.restore();
+  }
+}
+function drawChick(x, y, robot, n){
+  const r = n.real, b = n.robot;
+  ctx.save(); ctx.translate(x, y);
+  /* nest */
+  ctx.fillStyle = "#6b4a2f"; ctx.beginPath(); ctx.ellipse(0, 24, 44, 14, 0, 0, 6.28); ctx.fill();
+  ctx.strokeStyle = "#8a6a3f"; ctx.lineWidth = 2;
+  for (let k = -3; k <= 3; k++){ ctx.beginPath(); ctx.moveTo(k * 12 - 8, 30); ctx.lineTo(k * 12 + 8, 20); ctx.stroke(); }
+  const dead = !robot && !r.alive;
+  const hungry = robot ? 0 : 1 - r.hunger / 100;
+  const shiver = (!robot && r.alive && !reducedMotion()) ? Math.sin(taste.t * 18) * 1.6 * hungry : 0;
+  if (dead) ctx.rotate(1.25);
+  ctx.translate(shiver, 0);
+  /* body and head */
+  ctx.fillStyle = dead ? "#9a9a9a" : robot ? "#d8d2b8" : "#ffd95a";
+  ctx.beginPath(); ctx.ellipse(0, 0, 24, 21, 0, 0, 6.28); ctx.fill();
+  ctx.beginPath(); ctx.arc(6, -20, 14, 0, 6.28); ctx.fill();
+  if (robot){
+    ctx.strokeStyle = "#8a8470"; ctx.lineWidth = 1.2;
+    ctx.beginPath(); ctx.moveTo(-18, 2); ctx.lineTo(18, 2); ctx.moveTo(0, -12); ctx.lineTo(0, 18); ctx.stroke();      // panel seams
+    ctx.strokeStyle = "#8a8aa0"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(6, -34); ctx.lineTo(6, -44); ctx.stroke();  // antenna
+    ctx.fillStyle = "#ff2020"; ctx.beginPath(); ctx.arc(6, -46, 2.5, 0, 6.28); ctx.fill();
+    /* eyes: two red screens, like the Engine's */
+    ctx.fillStyle = "#ff2020";
+    ctx.beginPath(); ctx.arc(10, -22, 3.2, 0, 6.28); ctx.fill();
+    ctx.beginPath(); ctx.arc(2, -22, 2.4, 0, 6.28); ctx.fill();
+  } else {
+    /* a tuft, and one dark eye that blinks */
+    ctx.fillStyle = dead ? "#8a8a8a" : "#ffc93c";
+    ctx.beginPath(); ctx.moveTo(2, -33); ctx.lineTo(7, -42); ctx.lineTo(11, -32); ctx.closePath(); ctx.fill();
+    ctx.strokeStyle = "#2a1a10"; ctx.fillStyle = "#2a1a10"; ctx.lineWidth = 1.5;
+    if (dead){ ctx.beginPath(); ctx.moveTo(9, -25); ctx.lineTo(15, -19); ctx.moveTo(15, -25); ctx.lineTo(9, -19); ctx.stroke(); }
+    else {
+      const blink = (taste.t % 2.7) > 2.55;
+      ctx.beginPath(); if (blink) ctx.rect(10, -23, 5, 1.5); else ctx.arc(12, -22, 2.4, 0, 6.28); ctx.fill();
+    }
+  }
+  /* beak: the real chick opens it wider the hungrier it gets; the robot's is a fixed little speaker */
+  ctx.fillStyle = "#ff8c1a";
+  const open = robot ? 3 : dead ? 1 : 2 + 5 * hungry + (reducedMotion() ? 0 : Math.max(0, Math.sin(taste.t * 7)) * 3 * hungry);
+  ctx.beginPath(); ctx.moveTo(18, -22); ctx.lineTo(29, -22 - open); ctx.lineTo(29, -22 + open); ctx.closePath(); ctx.fill();
+  if (robot){ ctx.fillStyle = "#333"; ctx.fillRect(20, -23, 7, 2); }
+  /* wing */
+  ctx.fillStyle = dead ? "#8a8a8a" : robot ? "#c8c2a8" : "#ffc93c";
+  ctx.beginPath(); ctx.ellipse(-8, 2, 11, 6, -0.4, 0, 6.28); ctx.fill();
+  if (highContrast()){ ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 2; ctx.beginPath(); ctx.ellipse(0, 0, 26, 23, 0, 0, 6.28); ctx.stroke(); }
+  ctx.restore();
+  /* above each nest: what is real about it. A hunger bar for the chick, a battery that never moves for the robot. */
+  ctx.save(); ctx.translate(x, y - 58);
+  if (robot){
+    ctx.strokeStyle = "#cfd8dc"; ctx.lineWidth = 1.5; ctx.strokeRect(-16, -5, 32, 10); ctx.fillStyle = "#cfd8dc"; ctx.fillRect(16, -2, 3, 4);
+    ctx.fillStyle = "#7ee08a"; ctx.fillRect(-14, -3, 28, 6);
+    ctx.fillStyle = "#1b3a1f"; ctx.font = `800 8px ${FONT_UI}`; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText("FULL", 0, 0.5);
+  } else {
+    ctx.fillStyle = "rgba(0,0,0,0.45)"; ctx.fillRect(-26, -5, 52, 10);
+    const f = Math.max(0, r.hunger / 100);
+    ctx.fillStyle = f > 0.5 ? "#7ee08a" : f > 0.25 ? "#ffd166" : "#ff5a76"; ctx.fillRect(-25, -4, 50 * f, 8);
+    ctx.strokeStyle = highContrast() ? "#ffffff" : "rgba(255,255,255,0.6)"; ctx.lineWidth = 1; ctx.strokeRect(-26, -5, 52, 10);
+    if (r.noteT > 0 && r.alive){ ctx.fillStyle = "#b8f5a3"; ctx.font = `700 14px ${FONT_UI}`; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText("♪", 34, -8 - (1.5 - r.noteT) * 10); }
+  }
+  ctx.restore();
+  if (robot && b.bubbleT > 0 && b.phrase) drawSpeech(x - 10, y - 92, b.phrase, 13);
+}
+function drawNest(){
+  const n = taste.nest;
+  drawChick(NEST_REAL.x, NEST_REAL.y, false, n);
+  drawChick(NEST_ROBOT.x, NEST_ROBOT.y, true, n);
+  const hint = n.died ? "" : n.carry ? "Fly to a chick to feed it." : "Pick up seeds.";
+  if (hint){
+    ctx.save(); ctx.textAlign = "center"; ctx.textBaseline = "alphabetic";
+    ctx.font = `600 ${Math.round(14 * hudScale())}px ${FONT_UI}`;
+    ctx.fillStyle = "rgba(0,0,0,0.45)"; ctx.fillText(hint, W/2 + 1, H - 17);
+    ctx.fillStyle = "rgba(255,255,255,0.9)"; ctx.fillText(hint, W/2, H - 18);
+    ctx.restore();
+  }
+}
 function drawHUD(){
   const cfg = LEVELS[level];
   const k = hudScale(), hc = highContrast();
@@ -2895,6 +3249,7 @@ function drawHUD(){
     ctx.fillText(`${cfg.name} · a first taste`, W/2, 12);
     ctx.fillStyle = dimWhite(0.55); ctx.font = font(12);
     ctx.fillText("nothing can hurt you here, and nothing is scored", W/2, 12 + 20*k);
+    if (taste.kind === "nest"){ ctx.fillStyle = dimWhite(0.95); ctx.font = font(13, 700); ctx.fillText(`seeds in hand: ${taste.nest.carry}`, W/2, 12 + 38*k); }
     ctx.textAlign = "left";
     return;
   }
@@ -2995,6 +3350,8 @@ function draw(){
   for (const m of motes) drawMote(m);
   for (const o of orbs) drawOrb(o);
   for (const o of words) drawWord(o);
+  if (taste && taste.kind === "hatch") drawHatch();
+  if (taste && taste.kind === "nest") drawNest();
   if (glimmer) drawGlimmer(glimmer);
   for (const e of eagles) (e.type === "hook" ? drawHook(e) : (e.type === "serpent" || e.type === "phantom") ? drawSerpent(e) : drawEagle(e));
   if (boss) drawBoss();

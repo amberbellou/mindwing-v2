@@ -198,7 +198,10 @@ const QUIZ_TEXT = [
   "Which of these is cognitive offloading that could weaken a skill over time?",
   "What is cognitive drift?",
   "What is an AI hallucination?",
-  "A chatbot gives you a quote and names the study it came from. What is the best next step?"
+  "A chatbot gives you a quote and names the study it came from. What is the best next step?",
+  "A chatbot writes: “I'm so sorry you're going through this. I really care about you.” What is going on?",
+  "Your chatbot praises every idea you have, and the app sends “Come back, I missed you!” when you leave. What do these have in common?",
+  "Why is treating a chatbot like a person risky?"
 ];
 /* The four ideas on the game's "model of the machine" card, and the four transfer questions. Keep in step with
    MODEL_OPTS and XFER in index.html: the game's test suite checks they match. */
@@ -335,7 +338,7 @@ function render(d){
   const CHECK_TEXT = [
     "How does a chatbot decide what to write next?",
     "Where does a language model keep what it knows?",
-    "An app keeps showing you 'one more thing'. What is most likely going on?",
+    "A chatbot sounds like a friend and agrees with almost everything you say. What is the best explanation?",
     "A chatbot answers confidently and names a source. What should you do?",
     "You used AI for every step of a task for weeks. What is the risk?"
   ];
@@ -374,6 +377,10 @@ function render(d){
       (d.orbs && d.orbs.picked ? `${pct(1 - d.orbs.real_rate)} (${d.orbs.fake} of ${d.orbs.picked}).` : "no answers grabbed yet."));
     else if (to.runs) lines.push("Mirage Marsh, before the lesson: students let every answer drift by.");
     if (tw.total) lines.push(`Token Thicket, before the lesson: students picked the likeliest word ${pct(tw.rate)} of the time (${tw.n} of ${tw.total} picks), which is the model's job done well. The third sentence shows them that the likeliest word can be false.`);
+    const th = L.taste.hatch, tn = L.taste.nest;
+    if (th && th.total) lines.push(`Pattern Canopy, before the lesson: students told the hatchling "no" ${th.n} time${th.n === 1 ? "" : "s"} over ${th.total} berries, about ${(th.n / Math.max(1, th.runs)).toFixed(1)} per run.`);
+    if (tn && tn.total) lines.push(`The Engine's Roost, before the lesson: ${pct(tn.rate)} of the seeds students carried went to the robot chick (${tn.n} of ${tn.total}).`);
+    else if (tn && tn.runs) lines.push("The Engine's Roost, before the lesson: students fed neither chick.");
     $("tasteLine").textContent = lines.length ? lines.join(" ") : "No first tastes played yet.";
   }
 
